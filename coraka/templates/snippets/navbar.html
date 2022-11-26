@@ -1,0 +1,54 @@
+{% load static %}
+
+{% url 'firm' as firm %}
+{% url 'contact' as contact %}
+{% url 'portfolio' as portfolio %}
+{% url 'home' as home %}
+
+<header class="fixed bg-white/90 shadow z-50 navbar w-screen px-4 md:px-44 xl:px-64 py-5 flex items-center justify-between">
+  <a href="/" class="flex items-center">
+    <img src="{% static 'vendors/images/logo.png' %}" alt="logo" class="h-10 md:h-16">
+    <span class="block  text-2xl md:text-3xl font-bold">Coraka</span>
+  </a>
+
+  <div class="flex-none space-x-6">
+    <button class="cursor-pointer dropdown dropdown-end p-2 bg-dark text-white border-dark border-2 hover:text-dark hover:bg-success duration-300">
+      <label tabindex="0" class="cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+          <path fill-rule="evenodd" d="M9 2.25a.75.75 0 01.75.75v1.506a49.38 49.38 0 015.343.371.75.75 0 11-.186 1.489c-.66-.083-1.323-.151-1.99-.206a18.67 18.67 0 01-2.969 6.323c.317.384.65.753.998 1.107a.75.75 0 11-1.07 1.052A18.902 18.902 0 019 13.687a18.823 18.823 0 01-5.656 4.482.75.75 0 11-.688-1.333 17.323 17.323 0 005.396-4.353A18.72 18.72 0 015.89 8.598a.75.75 0 011.388-.568A17.21 17.21 0 009 11.224a17.17 17.17 0 002.391-5.165 48.038 48.038 0 00-8.298.307.75.75 0 01-.186-1.489 49.159 49.159 0 015.343-.371V3A.75.75 0 019 2.25zM15.75 9a.75.75 0 01.68.433l5.25 11.25a.75.75 0 01-1.36.634l-1.198-2.567h-6.744l-1.198 2.567a.75.75 0 01-1.36-.634l5.25-11.25A.75.75 0 0115.75 9zm-2.672 8.25h5.344l-2.672-5.726-2.672 5.726z" clip-rule="evenodd" />
+        </svg>
+      </label>
+      <div id="google_translate_element" class="p-2 -mt-8 card card-compact dropdown-content w-64 bg-base-100 shadow rounded-none border-dark border-2"></div>
+    </button>
+
+    <nav class="hidden md:block flex flex-none items-center space-x-6">
+      <a href="{% url 'firm' %}" class="{% if request.path ==  firm %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">THE FIRM</a>
+      <a href="{% url 'portfolio' %}" class="{% if request.path ==  portfolio %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">PORTFOLIO</a>
+      <a href="{% url 'contact' %}" class="{% if request.path ==  contact %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">CONTACT US</a>
+    </nav>
+
+    <div class="navbar-end md:hidden flex-none">
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+          <!-- <input type="checkbox" class="hidden"/> -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 swap-off" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 swap-on">
+            <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd" />
+          </svg> -->
+        </label>
+        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-none border-2 border-dark divide-y-2 divide-dark w-52">
+          <li class="hover:bg-dark focus:bg_dark focus:text-success hover:text-success">
+            <a href="{% url 'firm' %}" class="{% if request.path ==  firm %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">THE FIRM</a>
+          </li>
+          <li class="hover:bg-dark focus:bg_dark focus:text-success hover:text-success">
+            <a href="{% url 'portfolio' %}" class="{% if request.path ==  portfolio %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">PORTFOLIO</a>
+          </li>
+          <li class="hover:bg-dark focus:bg_dark focus:text-success hover:text-success">
+            <a href="{% url 'contact' %}" class="{% if request.path ==  contact %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">CONTACT US</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</header>

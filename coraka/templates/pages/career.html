@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ block.super }} Join Our Network
+{% endblock title %}
+
+{% block content %}
+<section class="py-24 px-4 md:px-44 xl:px-64">
+  <div class="w-full md:max-w-2xl md:mx-auto text-center space-y-4">
+    <h4 class="text-3xl md:text-5xl font-bold">Work with the leading companies in the blockchain industry</h4>
+    <p>Tell us about your professional DNA to get discovered by any company in our network with opportunities relevant to your career goals.</p>
+  </div>
+</section>
+
+<section class="px-4 md:px-44 xl:px-64 py-6">
+
+  <div class="overflow-x-auto relative shadow-md">
+    <table class="text-center w-full text-sm text-left text-dark dark:text-blue-100">
+      <thead class="text-base text-dark uppercase bg-light border-b border-success dark:text-white">
+        <tr>
+          <th scope="col" class="py-3 px-6">
+            COMPANY
+          </th>
+          <th scope="col" class="py-3 px-6">
+            SALARY
+          </th>
+          <th scope="col-2" class="py-3 px-6">
+            DESCRIPTION/ROLE
+          </th>
+          <th scope="col" class="py-3 px-6">
+            ACTION
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in careers %}
+        <tr class="bg-white border-b border-success hover:bg-success hover:text-dark ">
+          <th scope="row" class="py-4 px-6 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+            <img src="{{object.logo}}" alt="" class="h-10">
+          </th>
+          <td class="py-4 px-6">
+            {{object.salary}}
+          </td>
+          <td class="py-4 px-6 text-sm space-y-3">
+            <strong class="text-2xl font-bold uppercase block">{{object.title}}</strong>
+            <div class="text-justify line-clamp-3">{{object.description}}</div>
+          </td>
+          <td class="py-4 px-6">
+            <a href="mailto://{{object.application_email}}"
+              class="font-medium text-dark hover:border-dark hover:border-2 hover:text-dark duration-300 py-3 px-5">APPLY BY MAIL</a>
+          </td>
+        </tr>
+        {% empty %}
+        <tr class="bg-white border-b border-success hover:bg-success hover:text-dark ">
+          <th scope="row" class="flex-none py-4 px-6 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+            <img src="https://panteracapital.com/wp-content/uploads/2022/10/Logo-2.png" alt="" class="h-10">
+          </th>
+          <td class="py-4 px-6">
+            $170,000 Annually
+          </td>
+          <td class="py-4 px-6 space-y-3">
+            <strong class="text-2xl font-bold uppercase">software engineer</strong>
+            <div class="text-justify line-clamp-3">{% lorem 3 %}</div>
+          </td>
+          <td class="py-4 px-6">
+            <a href="#"
+              class="font-medium text-dark hover:border-dark hover:border-2 hover:text-dark duration-300 py-3 px-5">APPLY</a>
+          </td>
+        </tr>
+        <tr class="bg-white border-b border-success hover:bg-success hover:text-dark ">
+          <th scope="row" class="flex-none py-4 px-6 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+            <img src="https://panteracapital.com/wp-content/uploads/2021/02/Alchemy-logo.svg" alt="" class="h-10">
+          </th>
+          <td class="py-4 px-6">
+            $170,000 Annually
+          </td>
+          <td class="py-4 px-6 space-y-3">
+            <strong class="text-2xl font-bold uppercase">software engineer</strong>
+            <div class="text-justify line-clamp-3">{% lorem 3 %}</div>
+          </td>
+          <td class="py-4 px-6">
+            <a href="#"
+              class="font-medium text-dark hover:border-dark hover:border-2 hover:text-dark duration-300 py-3 px-5">APPLY</a>
+          </td>
+        </tr>
+        <tr class="bg-white border-b border-success hover:bg-success hover:text-dark ">
+          <th scope="row" class="flex-none py-4 px-6 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+            <img src="https://panteracapital.com/wp-content/uploads/2021/02/abra-logo.svg" alt="" class="h-10">
+          </th>
+          <td class="py-4 px-6">
+            $170,000 Annually
+          </td>
+          <td class="py-4 px-6 space-y-3">
+            <strong class="text-2xl font-bold uppercase">software engineer</strong>
+            <div class="text-justify line-clamp-3">{% lorem 3 %}</div>
+          </td>
+          <td class="py-4 px-6">
+            <a href="#"
+              class="font-medium text-dark hover:border-dark hover:border-2 hover:text-dark duration-300 py-3 px-5">APPLY</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Our Global Portfolio
+{% endblock title %}
+
+{% block content %}
+<section class="py-24 px-4 md:px-44 xl:px-64">
+  <div class="w-full md:max-w-2xl md:mx-auto text-center space-y-4">
+    <h4 class="text-3xl md:text-5xl font-bold">Coraka Portfolio</h4>
+    <p>We invest in thematic ideas and projects that are core infrastructure pieces of the blockchain ecosystem, such as
+      exchanges, custodians, institutional trading tools, decentralized finance, next gen payment systems, and more.
+      Since 2013, we have backed more than 90 blockchain companies and 100 early-stage token deals.</p>
+  </div>
+</section>
+
+<section class="px-4 md:px-44 xl:px-64 py-6">
+
+  <div class="overflow-x-auto relative shadow-md">
+    <table class="text-center w-full text-sm text-left text-dark dark:text-blue-100">
+      <thead class="text-base text-dark uppercase bg-light border-b border-success dark:text-white">
+        <tr>
+          <th scope="col" class="py-3 px-6">
+            NAME
+          </th>
+          <th scope="col" class="py-3 px-6">
+            TYPE
+          </th>
+          <th scope="col-2" class="py-3 px-6">
+            SECTOR
+          </th>
+          <th scope="col" class="py-3 px-6">
+            ACTION
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for object in portfolios %}
+        <tr class="bg-white border-b border-success hover:bg-success hover:text-dark ">
+          <th scope="row" class="py-4 px-6 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+            <img src="{{object.logo}}" alt="" class="h-10">
+          </th>
+          <td class="py-4 px-6">
+            {{object.service}}
+          </td>
+          <td class="py-4 px-6">
+            {{object.sector}}
+          </td>
+          <td class="py-4 px-6">
+            <a href="{{object.website}}"
+              class="font-medium text-dark hover:border-dark hover:border-2 hover:text-dark duration-300 py-3 px-5">VIEW
+              WEBSITE</a>
+          </td>
+        </tr>
+        {% empty %}
+        <tr class="bg-white border-b border-success hover:bg-success hover:text-dark ">
+          <th scope="row" class="py-4 px-6 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+            <img src="https://panteracapital.com/wp-content/uploads/2022/10/Logo-2.png" alt="" class="h-10">
+          </th>
+          <td class="py-4 px-6">
+            Venture
+          </td>
+          <td class="py-4 px-6">
+            Infrastructure
+          </td>
+          <td class="py-4 px-6">
+            <a href="#"
+              class="font-medium text-dark hover:border-dark hover:border-2 hover:text-dark duration-300 py-3 px-5">VIEW
+              WEBSITE</a>
+          </td>
+        </tr>
+        <tr class="bg-white border-b border-success hover:bg-success hover:text-dark ">
+          <th scope="row" class="py-4 px-6 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+            <img src="https://panteracapital.com/wp-content/uploads/2021/02/Alchemy-logo.svg" alt="" class="h-10">
+          </th>
+          <td class="py-4 px-6">
+            Venture
+          </td>
+          <td class="py-4 px-6">
+            Infrastructure
+          </td>
+          <td class="py-4 px-6">
+            <a href="#"
+              class="font-medium text-dark hover:border-dark hover:border-2 hover:text-dark duration-300 py-3 px-5">VIEW
+              WEBSITE</a>
+          </td>
+        </tr>
+        <tr class="bg-white border-b border-success hover:bg-success hover:text-dark ">
+          <th scope="row" class="py-4 px-6 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+            <img src="https://panteracapital.com/wp-content/uploads/2021/02/abra-logo.svg" alt="" class="h-10">
+          </th>
+          <td class="py-4 px-6">
+            Venture
+          </td>
+          <td class="py-4 px-6">
+            Infrastructure
+          </td>
+          <td class="py-4 px-6">
+            <a href="#"
+              class="font-medium text-dark hover:border-dark hover:border-2 hover:text-dark duration-300 py-3 px-5">VIEW
+              WEBSITE</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</section>
+
+<section class="bg-light py-24 px-4 md:px-44 xl:px-64">
+  <div class="w-full md:max-w-2xl md:mx-auto text-center space-y-4">
+    <h4 class="text-3xl md:text-5xl font-bold">Looking for a career in blockchain?</h4>
+    <p>Submit your profile to our partner network to get discovered by the best blockchain companies out there.</p>
+    <a href="{% url 'career' %}" class="block border-2 border-dark duration-300 py-3 px-5 hover:bg-dark hover:text-white">JOIN THE
+      NETWORK</a>
+  </div>
+</section>
+{% endblock content %}

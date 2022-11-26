@@ -1,0 +1,11 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply overflow-x-hidden overflow-y-auto bg-white text-black font-poppins scrollbar-hide w-screen scrollbar-track-warning scrollbar-thumb-black min-h-screen;
+}

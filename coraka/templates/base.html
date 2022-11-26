@@ -1,0 +1,102 @@
+{% load static i18n webpack_loader %}
+
+<!DOCTYPE html>
+
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <title>{% block title %}Coraka — {% endblock title %}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Forex trading security and Asset management firm">
+    <meta name="author" content="Darkcodr Codes">
+    <meta name="viewport" content="width=device-width,viewport-fit=cover,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="format-detection" content="email=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="Classification" content="Service">
+    <meta name="category" content="Fintech">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+
+    <link rel="icon" href="{% static 'vendors/images/logo.png' %}">
+    <link rel="dns-prefetch" href="https://coraka.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&&family=DynaPuff:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&family=Poiret+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,100;1,200&family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0&display=swap" rel="stylesheet">
+    <link rel="shortlink" href="https://coraka.com">
+
+
+    {% block css %}
+    {% endblock %}
+
+    {% block javascript %}
+    {% endblock javascript %}
+
+    {% stylesheet_pack 'app' %}
+  </head>
+
+  <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' style="background-image: url({% static 'vendors/images/bg.jpg' %}); background-size: fit; background-repeat background-position: top">
+
+    {% include "snippets/navbar.html" %}
+
+    <main class="w-screen min-h-screen pt-24">
+      {% block content %}{% endblock content %}
+    </main>
+
+    {% block modal %}
+    <!-- Put this part before </body> tag -->
+    <input type="checkbox" id="modal" class="modal-toggle" />
+    <label for="modal" class="modal cursor-pointer">
+      <label class="modal-box relative" for="">
+        <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
+        <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+      </label>
+    </label>
+    {% endblock modal %}
+
+    {% include "snippets/footer.html" %}
+
+    {% block inline_javascript %}
+    {% comment %}
+    Script tags with only code, no src (defer by default). To run
+    with a "defer" so that you run inline code:
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {/* Run whatever you want */});
+    </script>
+    {% endcomment %}
+    {% endblock inline_javascript %}
+
+    {% javascript_pack 'app' %}
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+    </script>
+
+    <script>
+      window.ip = '{{ip}}'
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>

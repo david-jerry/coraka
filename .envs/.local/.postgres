@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=coraka
+POSTGRES_USER=IZkITTxGZTiEpJMFkHAnNjsicOlaPzkm
+POSTGRES_PASSWORD=oyK7egoGLF3PYDL3frA3KVDphha6PkVUmshVfbwJKeCyHiQZ6lVqFNMI2x4OCMTS
