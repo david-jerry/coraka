@@ -274,3 +274,4 @@ coraka/media/
 .env
 .envs/*
 !.envs/.local/
+.enviroment
