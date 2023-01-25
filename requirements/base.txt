@@ -28,7 +28,7 @@ django-tinymce==3.4.0
 
 feedparser==6.0.8
 
-google-api-python-client==1.4.1
+google-api-python-client==2.74.0
 
 loguru==0.5.3
 
