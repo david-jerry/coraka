@@ -1,2 +1,2 @@
 (self.webpackChunkpython_webpack_boilerplate=self.webpackChunkpython_webpack_boilerplate||[]).push([[143],{546:function(n,o,e){"use strict";e(730);var t=e(450),i=e.n(t),d=e(306);e(786),window.htmx=i(),window.Alpine=d.Z,d.Z.start(),window.document.addEventListener("DOMContentLoaded",(function(){window.console.log("dom ready 1")}))},786:function(){window.console.log("sidebar is loaded")}},function(n){n.O(0,[34],(function(){return 546,n(n.s=546)})),n.O()}]);
-//# sourceMappingURL=app.0cbc49d3.js.map
+//# sourceMappingURL=app.b3f93e29.js.map
