@@ -21,9 +21,9 @@
       <div id="google_translate_element" class="p-2 -mt-8 card card-compact dropdown-content w-64 bg-base-100 shadow rounded-none border-dark border-2"></div>
     </button>
 
-    <nav class="hidden md:block flex flex-none items-center space-x-6">
+    <nav class="hidden md:flex flex-none items-center space-x-6">
       <a href="{% url 'firm' %}" class="{% if request.path ==  firm %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">THE FIRM</a>
-      <a href="{% url 'portfolio' %}" class="{% if request.path ==  portfolio %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">PORTFOLIO</a>
+      <!-- <a href="{% url 'portfolio' %}" class="{% if request.path ==  portfolio %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">PORTFOLIO</a> -->
       <a href="{% url 'contact' %}" class="{% if request.path ==  contact %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">CONTACT US</a>
     </nav>
 
@@ -40,9 +40,9 @@
           <li class="hover:bg-dark focus:bg_dark focus:text-success hover:text-success">
             <a href="{% url 'firm' %}" class="{% if request.path ==  firm %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">THE FIRM</a>
           </li>
-          <li class="hover:bg-dark focus:bg_dark focus:text-success hover:text-success">
+          <!-- <li class="hover:bg-dark focus:bg_dark focus:text-success hover:text-success">
             <a href="{% url 'portfolio' %}" class="{% if request.path ==  portfolio %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">PORTFOLIO</a>
-          </li>
+          </li> -->
           <li class="hover:bg-dark focus:bg_dark focus:text-success hover:text-success">
             <a href="{% url 'contact' %}" class="{% if request.path ==  contact %}text-success font-bold{% endif %} hover:font-bold hover:text-success duration-300">CONTACT US</a>
           </li>
