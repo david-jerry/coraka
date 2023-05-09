@@ -4340,8 +4340,6 @@ input:checked + .toggle-bg {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }.grid-cols-10 {
   grid-template-columns: repeat(10, minmax(0, 1fr));
-}.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }.grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }.grid-cols-7 {
@@ -5075,4 +5073,4 @@ input:checked + .toggle-bg {
   }
 }
 
-/*# sourceMappingURL=app.309e9b49ee318010d3b4.css.map*/
+/*# sourceMappingURL=app.d83b6defd4f3adfb9a95.css.map*/
