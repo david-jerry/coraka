@@ -13,8 +13,8 @@
     A digital content startup, where we help web3/blockchain/DeFi projects thrive in the online world. Our team of experienced professionals is dedicated to providing a range of services, including community management, chat moderation, graphic design, chatbot expertise, copywriting, media, and more.
   </p>
   <div class="flex items-center space-x-3">
-    <a href="" class="block duration-300 border-2 border-dark py-3 px-5 hover:bg-dark hover:text-light">CONNECT</a>
-    <a href="{% url 'portfolio' %}" class="block duration-300 border-2 border-dark py-3 px-5 hover:bg-dark hover:text-light">PORTFOLIO</a>
+    <!-- <a href="" class="block duration-300 border-2 border-dark py-3 px-5 hover:bg-dark hover:text-light">CONNECT</a> -->
+    <!-- <a href="{% url 'portfolio' %}" class="block duration-300 border-2 border-dark py-3 px-5 hover:bg-dark hover:text-light">PORTFOLIO</a> -->
   </div>
 </section>
 
@@ -38,31 +38,40 @@
   <div class="grid grid-cols-1 md:grid-cols-2">
     <div class="bg-dark text-white px-8 md:px-24 py-8 md:py-24 items-center flex flex-col justify-center space-y-8">
       <div class="space-y-10">
-        <h2 class="text-2xl md:text-5xl font-bold"><span class="text-success font-black">CORAKA</span> at a glance</h2>
-        <div class="w-full grid grid-cols-2 md:grid-cols-3 gap-4">
+        <h2 class="text-2xl md:text-5xl font-bold"><span class="text-success font-black">CORAKA</span> offers you</h2>
+        <div class="w-full grid grid-cols-2 gap-4">
           <div class="text-center flex flex-col items-center jsutify-center flex-grow">
-            <h3 class="text-success text-3xl font-bold">$4.5bn</h3>
-            <p>Assets Under Management</p>
+            <h3 class="text-success text-3xl font-bold">PROJECT MANAGEMENT </h3>
+            <p>
+              The process of arranging, planning, and carrying out a project from beginning to end or a specific area of the project. It entails organizing people, tasks, and resources to accomplish particular objectives within a predetermined timeframe and financial constraints.
+            </p>
           </div>
           <div class="text-center flex flex-col items-center jsutify-center flex-grow">
-            <h3 class="text-success text-3xl font-bold">3</h3>
-            <p>Investment Strategies</p>
+            <h3 class="text-success text-3xl font-bold">COMMUNITY MANAGEMENT </h3>
+            <p>
+              In the digital age, community management often takes place online, where individuals can connect and interact through various platforms such as social media, forums, online groups, and websites. A community manager facilitate and foster positive interactions within the community, acting as a bridge between the community members and the organization or brand.
+            </p>
           </div>
           <div class="text-center flex flex-col items-center jsutify-center flex-grow">
-            <h3 class="text-success text-3xl font-bold">75%</h3>
-            <p>Deals Led <br> (Blockchain FUnd)</p>
+            <h3 class="text-success text-3xl font-bold">MODERATIONS </h3>
+            <p>
+              24/7 chat moderation refers to the continuous monitoring and management of online chat platforms or messaging systems by trained moderators around the clock. The purpose of 24/7 chat moderation is to ensure a safe and respectful environment for users, prevent inappropriate or harmful content, and enforce community guidelines or terms of service.            </p>
           </div>
           <div class="text-center flex flex-col items-center jsutify-center flex-grow">
-            <h3 class="text-success text-3xl font-bold">98</h3>
-            <p>Venture Investmentst</p>
+            <h3 class="text-success text-3xl font-bold">CHATBOT EXPERT  </h3>
+            <p>
+              A Chatbot expert plays a crucial role in developing, implementing and managing chatbot systems within a project community, aiming to enhance user experience, streamline communication, and provide valuable assistance to community members.            </p>
           </div>
           <div class="text-center flex flex-col items-center jsutify-center flex-grow">
-            <h3 class="text-success text-3xl font-bold">89%</h3>
-            <p>Assets Recovery</p>
+            <h3 class="text-success text-3xl font-bold">CONTENT CREATION</h3>
+            <p>
+              The process of creating useful and interesting content for a variety of platforms and media, including websites, blogs, social media, videos, podcasts, and more, is referred to as content creation. It entails producing unique, pertinent material that appeals to the target market and fulfills a certain need, such as promoting a good or service or providing entertainment or education.
+            </p>
           </div>
           <div class="text-center flex flex-col items-center jsutify-center flex-grow">
-            <h3 class="text-success text-3xl font-bold">120</h3>
-            <p>Early-Stage Token Investments</p>
+            <h3 class="text-success text-3xl font-bold">PROMOTIONS</h3>
+            <p>
+              In the context of marketing and business, promotions refer to a variety of techniques and actions performed to promote a good, service, or brand in order to raise awareness of it, draw in customers, and improve sales. Promotions are essential for raising awareness, stoking interest, and inspiring action among target audiences.            </p>
           </div>
         </div>
         <a href="{% url 'firm' %}" class="text-center border-white border-2 hover:bg-white hover:text-dark duration-300 w-full md:w-auto px-6 py-3 md:mx-auto block">ENTER THE FIRM</a>
@@ -72,6 +81,7 @@
   </div>
 </section>
 
+{% comment %}
 <section class="w-screen px-4 md:px-44 xl:px-64 py-24 space-y-4">
   <div class="space-y-6 text-center">
     <h4 class="font-bold text-2xl md:text-4xl">Investment Types</h4>
@@ -92,4 +102,5 @@
     </div>
   </div>
 </section>
+{% endcomment %}
 {% endblock content %}
